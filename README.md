@@ -11,27 +11,10 @@ This project builds an automatic bug report classifier for open-source projects 
 
 ---
 
-Project Structure
-
-bug-report-classification/
-├── datasets/                # Input data: cleaned bug reports 
-│   ├── pytorch.csv
-│   ├── tensorflow.csv
-│   ├── keras.csv
-│   ├── incubator-mxnet.csv
-│   └── caffe.csv
-├── model_results/           # Output directory: results for each model
-│   ├── pytorch/
-│   ├── tensorflow/
-│   └── ... (others)
-├── bugreport.py             #  Main script 
-├── manual.pdf               #  User Manual
-├── replication.pdf          #  Replication Guide
-├── System Requirements & Dependencies.pdf
-└── .gitignore               # Ignore system/cache/config files
 
 
-How to Run
+# How to Run
+
 1. Install dependencies
 Make sure you have Python 3.8+ and the following packages:
 pip install -r requirements.txt
@@ -41,8 +24,9 @@ You can also refer to the provided System Requirements & Dependencies.pdf.
 python bugreport.py
 This will process all datasets and generate results (metrics, plots, saved models) in the model_results/ folder.
 
+---
 
-Output Summary
+# Output Summary
 For each project (e.g. pytorch), the script generates:
 
 *_final_comparison.csv: Model performance summary (accuracy, precision, recall, F1, AUC)
@@ -53,7 +37,9 @@ For each project (e.g. pytorch), the script generates:
 
 .h5 files: Saved deep learning models
 
-Replication
+---
+
+# Replication
 Steps for replication are detailed in replication.pdf.
 The project supports full re-execution using bugreport.py, requiring only the datasets/ folder.
 
